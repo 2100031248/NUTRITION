@@ -1,0 +1,129 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	KLEF
+</title><meta charset="UTF-8" /><meta name="description" content="Koneru Lakshmaiah Education Foundation" /><link href="css/styles.css" rel="stylesheet" /><link rel="icon" type="image/x-icon" href="imgs/fav.ico" />
+    <script type="text/javascript" src="js/main.js" ></script>
+    <script type="text/javascript" src="js/default.js" ></script>
+</head>
+<body onload="loadPage()">
+    <div class="full-height">
+        <div id="progress" class="modal"></div>
+        <div id="header" style="width:100%;height:60px;line-height:60px;background:white">
+            <img src="imgs/logo1.png" alt="" style="height:50px;padding:5px 0 0 5px" />
+        </div>
+        <div id="content" style="width:100%;height:calc(100% - 90px);background-color:#7F2901;background:url('imgs/b005.jpg') no-repeat; background-size:cover">
+            <div style="width:100%;height:100%;background:rgba(0,0,0,0.25);">
+                <div id="modalcontent" style="width:100%;height:calc(100% - 35px);">
+                    <div style="width:calc(100% - 400px);height:100%;top:30px;left:50px;float:left;color:white;text-align:justify">
+                        <div style="width:calc(100% - 50px);padding:10px 0 10px 40px;font-size:9pt">
+                            <div style="width:100%;font-size:20pt;padding-top:20px;">KLEF | Academics</div>
+                            <p>The KLEF assures quality in teaching, academic environment, research strength, 
+                                through the state of the art Infrastructural facilities. The programmes offered 
+                                across the KLEF are   innovative, flexible, and cutting-edge. Our curriculum 
+                                design involves feedback from experts in the private, public sectors, parents,
+                                and civil society. The curriculum is designed to make the student either go for
+                                higher studies, or seek placement, or do research or to become entrepreneurs after their study.</p>
+                            
+                            <p>Skilling is the main focus of our teaching learning process. Active Learning 
+                                Methods (ALM), Lab Taken to Class  (LTC), Project Based Labs (PBL)are some of the
+                                s teaching pedagogies used for making the students learn by doing. This will help 
+                                to   learn concepts and strategies that can be applied to working life immediately
+                                , significantly enhancing their career prospects.</p>
+
+                            <p>The students are encouraged to debate, discuss, and analyze. The co-curricular and 
+                                extracurricular activities are given prominence in the curriculum. Students are evaluated 
+                                on a continuous basis throughout the semester.</p>
+
+                            <p>Our Academic Structure offers lot of Flexibility for students. Research is a part of curriculum
+                                at both under graduate and higher degree programmes. There are a number of interdisciplinary 
+                                courses, where departments work together to create strong, new programmes where fields converge
+                                to suit to the current industrial and societal needs.</p>
+
+                            <button class="readmorebtn" onclick="readMore()">Read more..</button>
+                        </div>
+                    </div>
+                    <div style="width:300px;height:415px;float:right;padding:40px;">
+                        <div style="width:280px;height:calc(100% - 20px);background:white;padding:10px">
+                            <div style="width:100%;height:25px;font-weight:bold;font-size:14pt;">Login</div>
+                            <div style="width:100%;height:calc(100% - 25px);background-color:#EFEFEF">
+                                <div style="text-align:center;padding-top:10px"><img src="imgs/logo.png" alt="" width="75" /></div>
+                                <div id="eid" style="width:100%;padding-left:5px;padding-top:15px;">
+                                    <span style="padding-left:3px;padding-bottom:5px">Enter your Username</span>
+                                    <div style="width:100%">
+                                        <table style="width:100%">
+                                            <tr>
+                                                <td>
+                                                    <input id="T1" type="text" autocomplete="off" style="width:264px;height:30px;border:1px solid #ccc;border-radius:2px;padding-left:25px;background-image:url('/imgs/user_ico.PNG');background-repeat:no-repeat;text-transform:uppercase;font-size:12pt" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div style="width:100%;height:20px"></div>
+                                    <span style="padding-left:3px;padding-bottom:5px">Enter the captcha shown</span>
+                                    <div style="width:100%">
+                                        <table style="width:100%">
+                                            <tr>
+                                                <td style="width:100px"><input id="T2" type="text" autocomplete="off" style="width:100px;height:30px;border:1px solid #ccc;border-radius:2px;font-size:10pt" /></td>
+                                                <td style="text-align:center"><img id="CAPTCHA" src="-" alt="CAPTCHA" onclick="newCaptcha()" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div style="width:100%;height:25px"></div>
+                                    <div style="width:100%">
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td><button id="B1" class="button" style="width:264px" onclick="validation(this)" >Continue</button></td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    <div style="width:100%;height:20px"></div>
+                                    <label id="L1" style="color:red"></label>
+                                    <div style="width:100%;height:30px"></div>
+                                    <span style="padding-left:3px;font-size:8pt;text-align:justify;">You will receive a code in your email to verify next.</span>
+                                </div>
+                                <div id="otp" style="width:100%;padding-left:5px;padding-top:15px;display:none">
+                                    <div style="width:100%;height:30px;position:relative">
+                                        <img src="/imgs/left-arrow.png" alt="" height="20" onclick="onbackclick()" style="left:0;cursor:pointer" /><label id="back" onclick="onbackclick()" style="top:2px;position:absolute;cursor:pointer;font-size:12pt;font-weight:bold">Back</label>
+                                    </div>
+                                    <div style="width:100%;height:10px"></div>
+                                    <span style="">Enter 4 digit verification code received in your email</span>
+                                    <div style="height:5px;width:100%"></div>
+                                    <div style="width:100%">
+                                        <table style="width:100%">
+                                        <tr><td></td>
+                                        <td style="width:50px"><input id="first" class="otptext" style="font-size:12pt" autocomplete="off" type="text" maxlength="1" onkeyup="clickEvent(this,'second')" /></td>
+                                        <td style="width:50px"><input id="second" class="otptext" style="font-size:12pt" autocomplete="off" type="text" maxlength="1" onkeyup="clickEvent(this,'third')" /></td>
+                                        <td style="width:50px"><input id="third" class="otptext" style="font-size:12pt" autocomplete="off" type="text" maxlength="1" onkeyup="clickEvent(this,'fourth')" /></td>
+                                        <td style="width:50px"><input id="fourth" class="otptext" style="font-size:12pt" autocomplete="off" type="text" maxlength="1" onkeyup="clickEvent(this,'B2')" /></td>
+                                        <td></td></tr>
+                                        </table>
+                                    </div>
+                                    <div style="width:100%;height:30px;padding-top:10px">
+                                        <table style="width:100%;height:100%">
+                                        <tr><td style="width:110px">Didn't receive code?</td><td style="width:90px"><a href="#" onclick="requestAgain()">Request again</a></td><td><img id="spinner" style="display:none" src="/imgs/loading.gif" alt="" height="20" /></td>
+                                        </tr></table>
+                                    </div>
+                                    <div style="width:100%;height:20px"></div>
+                                    <button id="B2" class="button" onclick="signin(this)" >Continue to SignIn</button>
+                                    <div style="width:100%;height:20px"></div>
+                                    <label id="L2" style="color:red"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modalfooter" style="width:100%;height:35px;background:rgba(0,0,0,0.25);line-height:35px"></div>
+            </div>
+        </div>
+        <div id="footer" style="width:100%;height:30px;line-height:30px;font-size:7pt">
+            <label id="copyright" style="padding-left:5px;float:left"></label>
+            <label id="developedby" style="padding-right:5px;float:right"></label>
+        </div>
+    </div>
+</body>
+</html>
